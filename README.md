@@ -1,2 +1,2 @@
 # flashcards-django
-Flashcards web applications built with django.
+Flashcards web application, built with django.
