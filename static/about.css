@@ -1,0 +1,112 @@
+.item1 { grid-area: picture; }
+.item2 { grid-area: description; text-align: justify; font-size: 25px;}
+.item3 { grid-area: header; text-align: center;}
+.item4 { grid-area: subtitle1; text-align: center;}
+.item5 { grid-area: subtitle2; text-align: center;}
+.item6 { grid-area: subtext1; text-align: justify;}
+.item7 { grid-area: subtext2; text-align: justify;}
+.item8 { grid-area: subtitle3;}
+.item9 { grid-area: subtitle4;}
+.item10 { grid-area: subtitle5;}
+.item11 { grid-area: subtitle6;}
+
+h2 {
+  text-align: center;
+}
+
+img {
+  width: 40%;
+  height: 40%;
+  object-fit: contain;
+  float:left;
+  margin-right: -320px;
+  object-position: 10% 10%;
+}
+
+.introduction {
+  padding: 100px;
+  line-height: 1.5;
+  text-align: justify;
+  font-size: 25px;
+}
+
+.skills {
+  display: grid;
+  grid-column-gap: 4%;
+  grid-template-areas:
+    '. subtitle1 . subtitle2 .'
+    '. subtext1 . subtext2 .';
+  font-size: 30px;
+  padding: 1px;
+}
+
+
+.experience {
+  display: grid;
+  grid-column-gap: 4%;
+  grid-template-areas:
+    'subtitle1 subtitle2'
+    'description description'
+    'subtitle3 subtitle4'
+    'subtitle5 subtitle6';
+  font-size: 28px;
+}
+
+.education {
+  display: grid;
+  grid-column-gap: 4%;
+  grid-template-areas:
+    'subtitle3 subtitle4'
+    'subtitle5 subtitle6';
+  font-size: 28px;
+  margin-left: 11%;
+}
+
+.activity {
+  display: grid;
+  grid-column-gap: 4%;
+  grid-template-areas:
+    'subtitle1 subtitle2'
+    'subtitle3 subtitle4'
+    'subtitle5 subtitle6';
+  font-size: 28px;
+}
+
+.colsection {
+  display: grid;
+  grid-column-gap: 4%;
+  grid-template-areas:
+    'header header header'
+    'subtitle1 subtitle2 subtitle3'
+    'subtitle4 subtitle5 subtitle6';
+  font-size: 25px;
+  padding: 5px;
+}
+
+.about ul {
+  padding: 1px;
+
+}
+
+.about li {
+  margin-bottom: 10px;
+  margin-left: 35%;
+}
+
+.about li:last-child {
+  margin-bottom: 0px;
+}
+
+h3,h4,h5 {
+  font-weight: normal;"
+}
+
+.skills li {
+  margin-bottom: 10px;
+  margin-left: 10%;
+}
+
+.experience li {
+  margin-bottom: 10px;
+  margin-left: 10%;
+}
