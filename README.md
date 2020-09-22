@@ -7,7 +7,7 @@ Final idea is that every user has its own cards (deck)
 Overall plan (evaluated during production)
 
 - [x] REST skeleton i.a. models etc.
-- [ ] Visual aspects i.a. JS, CSS and HTML.
+- [x] Visual aspects i.a. JS, CSS and HTML.
 - [ ] Construction of site tabs and urls.
 - [ ] Implementation of users.
 - [ ] Authentication methods.
