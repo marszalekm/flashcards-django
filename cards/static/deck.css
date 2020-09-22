@@ -30,20 +30,18 @@ a, a:hover, a:focus, a:active {
 }
 
 [id^='Original-'], [id^='Translation-'] {
-    font-size: 25px;
+    font-size: 20px;
+    position: absolute;
 }
 
 [id^='Original-'] {
-    position: absolute;
     width: 200px;
     height: 200px;
     line-height: 200px;
 }
 
-
 [id^='Translation-'] {
     display: none;
-    position: absolute;
     width: 200px;
     height: 200px;
     line-height: 200px;

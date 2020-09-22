@@ -7,12 +7,12 @@
 <div class="deck">
 <div class="row">
 {% for card in cards %}
-    {% if forloop.counter0|divisibleby:6 %}
+    {% if forloop.counter0|divisibleby:7 %}
     </div><div class="row">
         {% endif %}
-        <div class="card text-center">
+        <div class="card text-center" style="border-radius: 40px; background: #87CEFA;">
             <div class="card-body">
-                <a href="#" id="clickable-card-{{card.id}}" class="stretched-link">
+                <a href="#" id="clickable-card-{{card.id}}">
                     <div id="Original-{{card.id}}">{{ card.original }}</div>
                     <div id="Translation-{{card.id}}">{{ card.translation }}</div>
                 </a>

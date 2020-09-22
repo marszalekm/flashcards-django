@@ -11,13 +11,16 @@
     </div>
         <ul class="nav navbar-nav">
           <li><a class="active" href="{% url 'home' %}">Home</a></li>
-          <li><a class="nav-link" href="{% url 'cards' %}">Browse cards</a></li>
-          <li style="float:right"><a class="active" href="{% url 'home' %}">Login</a></li>
+          <li><a class="active" href="{% url 'cards' %}">Learn words</a></li>
+          <li><a class="active" href="{% url 'manage' %}">Manage cards</a></li>
+          <li style="float:right"><a class="active" href="/logout/">Logout</a></li>
+          <li style="float:right"><a class="active" href="/login/">Login</a></li>
+
         </ul>
   </div>
 </nav>
 
-<body style="background-color:#FDF5E6; font-family: Calibri, sans-serif;"></body>
+<body style="background-color:#6495ED; font-family: Calibri, sans-serif;"></body>
 {% block page_content %}
 {% endblock %}
 
