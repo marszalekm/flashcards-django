@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+<script src="{% static 'jquery-3.5.1.js' %}"></script>
+<link rel="stylesheet" href="{% static 'deck.css' %}">
+<h1 style="text-align: center;">Cards</h1>
+<div class="deck">
+<div class="row">
+{% for card in cards %}
+    {% if forloop.counter0|divisibleby:6 %}
+    </div><div class="row">
+        {% endif %}
+        <div class="card text-center">
+            <div class="card-body">
+                <a href="#" id="clickable-card-{{card.id}}" class="stretched-link">
+                    <div id="Original-{{card.id}}">{{ card.original }}</div>
+                    <div id="Translation-{{card.id}}">{{ card.translation }}</div>
+                </a>
+                <script>
+                    $(document).ready(function(){
+                        $('#clickable-card-{{card.id}}').click(function(){
+                            var duration = 500;
+                            $('#Original-{{card.id}}').fadeToggle(duration);
+                            $('#Translation-{{card.id}}').fadeToggle(duration);
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+{% endblock %}

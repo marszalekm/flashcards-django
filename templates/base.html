@@ -1,8 +1,8 @@
 <head>
   <title>Flashcards app</title>
 </head>
-
 {% load static %}
+
 <link rel="stylesheet" href="{% static 'base.css' %}">
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -10,8 +10,8 @@
     <div class="navbar-header">
     </div>
         <ul class="nav navbar-nav">
-          <li ><a class="active" href="{% url 'home' %}">Home</a></li>
-          <li><a class="nav-link" href="{% url 'home' %}">Create cards</a></li>
+          <li><a class="active" href="{% url 'home' %}">Home</a></li>
+          <li><a class="nav-link" href="{% url 'cards' %}">Browse cards</a></li>
           <li style="float:right"><a class="active" href="{% url 'home' %}">Login</a></li>
         </ul>
   </div>
