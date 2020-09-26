@@ -1,22 +1,39 @@
 {% extends "base.html" %}
+{% load rest_framework %}
 {% load static %}
 {% block page_content %}
+
 <link rel="stylesheet" href="{% static 'manage.css' %}">
+<script src="{% static 'jquery-3.5.1.js' %}"></script>
+
+<style>
+tr:hover {
+  outline: 2px solid blue;
+  cursor: pointer;
+}
+</style>
+
+<script>
+    jQuery(document).ready(function($) {
+    $(".clickable-row").click(function() {
+        window.location = $(this).data("href");
+    });
+});
+</script>
 <h1 style="text-align: center;">Manage cards</h1>
+
+
     <table>
           <tr>
-            <th>Active</th>
             <th>Original</th>
             <th>Translation</th>
           </tr>
         {% for card in cards %}
-          <tr>
-            <td><form action="">
-                <input type="checkbox" style="transform: scale(1.25);" id="active-{{card.id}}" checked=true>
-            </td>
+        <tr  class='clickable-row' data-href="{% url 'detail' id=card.id %}">
             <td>{{card.original}}</td>
             <td>{{card.translation}}</td>
-          {% endfor %}
+        {% endfor %}
+        </tr>
         </table>
 
 

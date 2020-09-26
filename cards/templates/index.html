@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load rest_framework %}
+{% load static %}
+{% block page_content %}
+
+
+<link rel="stylesheet" href="{% static 'manage.css' %}">
+
+<style>
+input[type=checkbox] {
+    transform: scale(1.25);
+    margin-top: 10px;
+    margin-bottom: -10px;
+    align-items: center;
+}
+</style>
+
+<h1 style="text-align: center;">Manage card</h1>
+
+<form style="width: 100%;" action="" data-method="put" method="PUT">
+{% render_form serializer template_pack='rest_framework/vertical' %}
+    <input type="submit" value="Save">
+</form>
+<br>
+
+<form action="{% url 'detail' word.id %}" data-method="delete" method="delete">
+    <input type="submit" name='delete' value="Remove">
+</form>
+
+{% endblock %}

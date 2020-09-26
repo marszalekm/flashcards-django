@@ -16,3 +16,15 @@ table {
 th {
   background-color: #4169E1;
 }
+
+input[type=checkbox] {
+    transform: scale(1.25);
+    margin-top: 10px;
+    margin-bottom: -10px;
+    align-items: center;
+}
+
+tr:hover {
+  outline: 2px solid blue;
+  cursor: pointer;
+}
