@@ -17,14 +17,17 @@ input[type=checkbox] {
 
 <h1 style="text-align: center;">Manage card</h1>
 
-<form style="width: 100%;" action="" data-method="put" method="PUT">
-{% render_form serializer template_pack='rest_framework/vertical' %}
-    <input type="submit" value="Save">
+<form style="width: 100%; text-align: center;" action="{% url 'detail' word.id %}" method="post">
+    {% csrf_token %}
+    {% render_form serializer template_pack='rest_framework/vertical' %}
+    <br>
+    <input style="padding: 5px;" type="submit" value="Save">
 </form>
-<br>
 
-<form action="{% url 'detail' word.id %}" data-method="delete" method="delete">
-    <input type="submit" name='delete' value="Remove">
+<form style="text-align: center;" action="{% url 'delete' word.id %}" method="post">
+    {% csrf_token %}
+    <button type="submit" value="Remove" class="btn-link">Delete</button>
 </form>
+
 
 {% endblock %}

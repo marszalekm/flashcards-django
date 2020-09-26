@@ -22,19 +22,18 @@ tr:hover {
 </script>
 <h1 style="text-align: center;">Manage cards</h1>
 
-
     <table>
-          <tr>
+        <tr>
             <th>Original</th>
             <th>Translation</th>
-          </tr>
+        </tr>
         {% for card in cards %}
         <tr  class='clickable-row' data-href="{% url 'detail' id=card.id %}">
             <td>{{card.original}}</td>
             <td>{{card.translation}}</td>
         {% endfor %}
         </tr>
-        </table>
+    </table>
 
 
 {% endblock %}
