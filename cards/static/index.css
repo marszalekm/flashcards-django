@@ -1,0 +1,15 @@
+h1 {
+  text-align: center;
+}
+
+input[type=checkbox] {
+    transform: scale(1.25);
+    margin-top: 10px;
+    margin-bottom: -10px;
+    align-items: center;
+}
+
+form {
+  width: 100%;
+  text-align: center;
+}

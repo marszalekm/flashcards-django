@@ -1,4 +1,5 @@
 from django.db import models
+from django.conf import settings
 
 
 class Word(models.Model):
@@ -10,3 +11,10 @@ class Word(models.Model):
 
     def __str__(self):
         return self.original
+
+# class Pack(models.Model):
+#     author = models.ForeignKey(
+#         settings.AUTH_USER_MODEL,
+#         on_delete=models.CASCADE,
+#     )
+#     deck = models.CharField(max_length=20)

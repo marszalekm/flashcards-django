@@ -1,30 +1,24 @@
+h1 {
+  text-align: center;
+}
+
 table, th, td {
-  border: 1px solid black;
+
   border-collapse: collapse;
   padding: 10px;
   text-align: center;
   background: #87CEFA;
   white-space: nowrap;
-}
-
-table {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+  border: 1px solid #FFFFFF;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 th {
   background-color: #4169E1;
 }
 
-input[type=checkbox] {
-    transform: scale(1.25);
-    margin-top: 10px;
-    margin-bottom: -10px;
-    align-items: center;
-}
-
-tr:hover {
-  outline: 2px solid blue;
+.clickable-row:hover {
+  outline: 2px solid #4169E1;
   cursor: pointer;
 }

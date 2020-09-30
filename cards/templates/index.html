@@ -6,25 +6,17 @@
 
 <link rel="stylesheet" href="{% static 'manage.css' %}">
 
-<style>
-input[type=checkbox] {
-    transform: scale(1.25);
-    margin-top: 10px;
-    margin-bottom: -10px;
-    align-items: center;
-}
-</style>
 
-<h1 style="text-align: center;">Manage card</h1>
+<h1>Manage card</h1>
 
-<form style="width: 100%; text-align: center;" action="{% url 'detail' word.id %}" method="post">
+<form action="{% url 'detail' word.id %}" method="post">
     {% csrf_token %}
     {% render_form serializer template_pack='rest_framework/vertical' %}
     <br>
-    <input style="padding: 5px;" type="submit" value="Save">
+    <input type="submit" value="Save">
 </form>
 
-<form style="text-align: center;" action="{% url 'delete' word.id %}" method="post">
+<form action="{% url 'delete' word.id %}" method="post">
     {% csrf_token %}
     <button type="submit" value="Remove" class="btn-link">Delete</button>
 </form>

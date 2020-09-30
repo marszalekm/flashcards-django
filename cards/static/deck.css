@@ -1,8 +1,17 @@
+h1 {
+  text-align: center;
+  padding: 50px;
+}
+
 .deck * {
     box-sizing: border-box;
     text-decoration: none;
     line-height: 200px;
 
+}
+
+.deck {
+    margin-top: -100px
 }
 
 a, a:hover, a:focus, a:active {
@@ -13,16 +22,19 @@ a, a:hover, a:focus, a:active {
 .row {
     display: flex;
     justify-content: center;
-    column-gap: 50px;
-    margin-bottom: 50px;
+    column-gap: 200px;
+    margin-bottom: 100px;
 
 }
 
 .card {
     box-shadow: 0 1px 2px 0 rgba(0,0,0,0.5);
     transition: 0.3s;
-    width: 200px;
+    width: 300px;
     height: 200px;
+    border-radius: 40px;
+    background: #87CEFA;
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
 }
 
 .card:hover {
@@ -32,17 +44,18 @@ a, a:hover, a:focus, a:active {
 [id^='Original-'], [id^='Translation-'] {
     font-size: 20px;
     position: absolute;
+    text-align: center;
 }
 
 [id^='Original-'] {
-    width: 200px;
+    width: 300px;
     height: 200px;
     line-height: 200px;
 }
 
 [id^='Translation-'] {
     display: none;
-    width: 200px;
+    width: 300px;
     height: 200px;
     line-height: 200px;
 }

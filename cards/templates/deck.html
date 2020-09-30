@@ -3,14 +3,14 @@
 {% block page_content %}
 <script src="{% static 'jquery-3.5.1.js' %}"></script>
 <link rel="stylesheet" href="{% static 'deck.css' %}">
-<h1 style="text-align: center;">Cards</h1>
+<h1>Cards</h1>
 <div class="deck">
 <div class="row">
 {% for card in cards %}
-    {% if forloop.counter0|divisibleby:7 %}
+    {% if forloop.counter0|divisibleby:3 %}
     </div><div class="row">
         {% endif %}
-        <div class="card text-center" style="border-radius: 40px; background: #87CEFA;">
+        <div class="card text-center">
             <div class="card-body">
                 <a href="#" id="clickable-card-{{card.id}}">
                     <div id="Original-{{card.id}}">{{ card.original }}</div>
@@ -19,6 +19,7 @@
                 <script>
                     $(document).ready(function(){
                         $('#clickable-card-{{card.id}}').click(function(){
+                            event.preventDefault();
                             var duration = 500;
                             $('#Original-{{card.id}}').fadeToggle(duration);
                             $('#Translation-{{card.id}}').fadeToggle(duration);
