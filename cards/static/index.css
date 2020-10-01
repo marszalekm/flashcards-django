@@ -9,7 +9,7 @@ input[type=checkbox] {
     align-items: center;
 }
 
-form {
+.form {
   width: 100%;
   text-align: center;
 }

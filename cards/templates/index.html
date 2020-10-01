@@ -4,19 +4,19 @@
 {% block page_content %}
 
 
-<link rel="stylesheet" href="{% static 'manage.css' %}">
+<link rel="stylesheet" href="{% static 'index.css' %}">
 
 
 <h1>Manage card</h1>
 
-<form action="{% url 'detail' word.id %}" method="post">
+<form class='form' action="{% url 'detail' word.id %}" method="post">
     {% csrf_token %}
-    {% render_form serializer template_pack='rest_framework/vertical' %}
+    {% render_form serializer template_pack='rest_framework' %}
     <br>
     <input type="submit" value="Save">
 </form>
 
-<form action="{% url 'delete' word.id %}" method="post">
+<form class='form' action="{% url 'delete' word.id %}" method="post">
     {% csrf_token %}
     <button type="submit" value="Remove" class="btn-link">Delete</button>
 </form>
