@@ -20,12 +20,18 @@
             <th>Original</th>
             <th>Translation</th>
         </tr>
-        {% for card in cards %}
-        <tr class='clickable-row' data-href="{% url 'detail' id=card.id %}">
-            <td>{{card.original}}</td>
-            <td>{{card.translation}}</td>
-        {% endfor %}
-        </tr>
+
+        {% if cards %}
+
+            {% for card in cards %}
+            <tr class='clickable-row' data-href="{% url 'detail' deck=card.deck.id id=card.id %}">
+                <td>{{card.original}}</td>
+                <td>{{card.translation}}</td>
+            {% endfor %}
+            </tr>
+        {% else %}
+        <h2>Deck is empty.</h2>
+        {% endif %}
     </table>
 
 
