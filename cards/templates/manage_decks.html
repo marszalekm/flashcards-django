@@ -12,9 +12,14 @@
         {% endif %}
         <div class="card text-center">
             <div class="card-body">
+                <form class='form' action="{% url 'deletedeck' id=deck.id %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" value="Remove" class="btn-del btn-primary">X</button>
+                </form>
                 <h2 class="card-title">{{ deck.name }}</h2>
                 <p class="card-text">{{ deck.description }}</p>
                 <a href="{% url 'managedeck' deck=deck.id %}" class="btn btn-primary">Manage deck</a>
+
             </div>
         </div>
     {% endfor %}

@@ -17,6 +17,11 @@ a, a:hover, a:focus, a:active {
     color: inherit;
 }
 
+.btn-del, .btn-del:hover, .btn-del:focus, .btn-del:active {
+    text-decoration: none;
+    color: inherit;
+}
+
 .row {
     display: flex;
     justify-content: center;
@@ -51,4 +56,19 @@ a, a:hover, a:focus, a:active {
   border-radius: 8px;
 }
 
-
+.btn-del {
+  margin-right: 35px;
+  margin-top: 8px;
+  margin-left: auto;
+  background-color: Transparent;
+  border: none;
+  color: red;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 25px;
+  border-radius: 40px;
+  width: 1%;
+  height: 1px;
+  cursor: pointer;
+}

@@ -4,7 +4,7 @@ from django.conf import settings
 
 class Pack(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    name = models.CharField(max_length=20)
+    name = models.CharField(blank=False, max_length=20)
     description = models.CharField(max_length=50)
 
     class Meta:

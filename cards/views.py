@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
+from django.template.response import TemplateResponse
 from rest_framework.decorators import api_view, permission_classes, authentication_classes, renderer_classes
 from .models import Word, Pack
 from .serializers import WordSerializer
@@ -53,6 +54,26 @@ class DecksManage(APIView):
         decks = Pack.objects.all().filter(author=self.request.user)
         serializer = WordSerializer(decks, many=True)
         return Response({'serializer': serializer, 'decks': decks})
+
+
+@api_view(['POST', 'GET'])
+@permission_classes([IsAuthenticated])
+@authentication_classes([TokenAuthentication, SessionAuthentication, BasicAuthentication])
+def deck_delete(request, id):
+    try:
+        pack = Pack.objects.get(id=id)
+
+    except Pack.DoesNotExist:
+        return HttpResponse(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'POST':
+
+        if pack.author == request.user:
+            pack.delete()
+            return render(request, "deck_deleted.html")
+        else:
+            return HttpResponse(status=status.HTTP_401_UNAUTHORIZED)
+
 
 class WordsManage(APIView):
 
@@ -154,5 +175,3 @@ def word_delete(request, deck, id):
         else:
             return HttpResponse(status=status.HTTP_401_UNAUTHORIZED)
 
-    else:
-        pass
