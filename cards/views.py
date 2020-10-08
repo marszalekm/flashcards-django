@@ -92,11 +92,13 @@ def word_add(request):
 @renderer_classes([TemplateHTMLRenderer])
 def deck_add(request):
 
-    form = DeckForm(request.POST or None)
+    form = DeckForm(request.POST, author=request.user)
     if form.is_valid():
         form.save()
         form = DeckForm()
         messages.success(request, 'Deck added successfully.')
+    else:
+        form = DeckForm(author=request.user)
     context = {'form': form}
     return render(request, "add_deck.html", context)
 
