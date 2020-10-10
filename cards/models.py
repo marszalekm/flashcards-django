@@ -18,7 +18,7 @@ class Word(models.Model):
     original = models.CharField(max_length=50)
     translation = models.CharField(max_length=50)
     deck = models.ForeignKey(Pack, on_delete=models.CASCADE)
-    visible = models.BooleanField(default=True)
+    visible = models.BooleanField(default=True, blank=False)
 
     class Meta:
         verbose_name = ("Word")
