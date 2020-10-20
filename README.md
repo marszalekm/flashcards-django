@@ -1,8 +1,8 @@
 # Django REST flashcards web app
 Flashcards web application, based on Django REST.
 
-Some general features 
-* Users can add and delete whole new decks or cards.
+Some general features: 
+* Users can add and delete whole decks or cards.
 * User authentication - every user has 
 it's own decks with cards and have no access to decks of other users. 
 * Cards learning is managed with simple JS script. 
@@ -23,5 +23,4 @@ Future plans / issues to be solved:
 - [ ] Better esthetics, UX.
 - [ ] _BUG_ - Users can add cards to other users decks. 
 - [X] Possibility to hide a card from deck (not remove).
-- [ ] Code clarity.
 
